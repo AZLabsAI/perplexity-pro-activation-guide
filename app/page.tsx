@@ -20,9 +20,6 @@ export default function Home() {
             <li>
               <a href="#faq">Checks</a>
             </li>
-            <li>
-              <a href="#source">Source</a>
-            </li>
           </ul>
         </div>
       </nav>
@@ -152,23 +149,6 @@ export default function Home() {
                 <p>{item.answer}</p>
               </article>
             ))}
-          </div>
-        </section>
-
-        <section className="section" id="source">
-          <div className="section-header">
-            <p className="section-eyebrow">Source</p>
-            <h2>Source trace</h2>
-          </div>
-          <p>
-            The instructional copy and screenshots on this page are adapted from the original
-            Perplexity Pro guide and kept here in a cleaner, easier-to-follow format.
-          </p>
-          <div className="contact-info">
-            <a href="https://teletype.in/@sup476/bUMyqDtSoVg" target="_blank" rel="noreferrer">
-              Original guide
-            </a>
-            <a href="#overview">Back to top</a>
           </div>
         </section>
       </main>
