@@ -1,1 +1,516 @@
-<!DOCTYPE html><html><head><title>Perplexity Pro Activation Guide</title></head><body><h1>Perplexity Pro Activation Guide</h1><p>This is a placeholder for the Perplexity Pro activation guide content.</p></body></html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Perplexity Pro Activation Guide</title>
+  <meta name="description" content="A focused activation guide for completing the Perplexity Pro checkout flow with the required annual billing and €0 confirmation.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --surface: #ffffff;
+      --on-surface: #1a1a1a;
+      --on-surface-variant: #757575;
+      --surface-container: rgba(255,255,255,0.9);
+      --surface-container-low: #f8f9fa;
+      --outline: rgba(0,0,0,0.1);
+      --primary: #1a73e8;
+      --primary-container: #4285f4;
+      --shimmer-shine: #1a73e8;
+      --radius-card: 16px;
+      --radius-pill: 9999px;
+      --max-width: 1280px;
+      --nav-height: 64px;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; }
+    body {
+      background:
+        radial-gradient(circle at top left, rgba(66,133,244,0.12), transparent 32%),
+        radial-gradient(circle at top right, rgba(138,180,248,0.16), transparent 28%),
+        var(--surface);
+      color: var(--on-surface);
+      font-family: 'Inter', system-ui, -apple-system, sans-serif;
+      line-height: 1.6;
+      letter-spacing: -0.01em;
+    }
+    a { color: inherit; text-decoration: none; }
+    ul { margin: 1rem 0 0; padding-left: 1.2rem; color: var(--on-surface-variant); }
+    li + li { margin-top: 0.55rem; }
+    p { color: var(--on-surface-variant); }
+    ::selection { background: rgba(26,115,232,0.22); }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; width: 100%; z-index: 1000;
+      background: rgba(255,255,255,0.7);
+      border-bottom: 1px solid var(--outline);
+      box-shadow: 0 10px 40px rgba(0,0,0,0.04);
+      backdrop-filter: blur(24px) saturate(160%);
+      -webkit-backdrop-filter: blur(24px) saturate(160%);
+    }
+    .nav-container {
+      max-width: var(--max-width); margin: 0 auto; width: 100%;
+      min-height: var(--nav-height); padding: 0 1.5rem;
+      display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    }
+    .brand-mark { font-size: 0.95rem; font-weight: 600; letter-spacing: -0.02em; }
+    .nav-menu { list-style: none; display: flex; gap: 0.25rem; flex-wrap: wrap; align-items: center; }
+    .nav-menu a {
+      font-weight: 500; font-size: 0.95rem; padding: 0.65rem 0.9rem;
+      border-radius: 12px; transition: color 0.2s, background-color 0.2s;
+    }
+    .nav-menu a:hover { color: var(--primary); background: rgba(26,115,232,0.08); }
+
+    /* CONTAINER */
+    .container {
+      max-width: var(--max-width); margin: 0 auto;
+      padding: calc(var(--nav-height) + 2rem) 1.5rem 2rem;
+    }
+
+    /* HERO */
+    .hero-shell {
+      overflow: hidden; border-radius: 32px;
+      border: 1px solid var(--outline);
+      background: linear-gradient(180deg, rgba(255,255,255,0.96), var(--surface-container-low));
+      box-shadow: 0 24px 80px rgba(26,115,232,0.08);
+      position: relative;
+    }
+    .hero-gradient {
+      position: absolute; inset: 0 0 auto 0; height: 420px;
+      background:
+        radial-gradient(circle at 18% 25%, rgb(209,246,255) 0%, transparent 28%),
+        radial-gradient(circle at 78% 22%, rgb(255,189,253) 0%, transparent 30%),
+        radial-gradient(circle at 55% 0%, rgb(181,242,255) 0%, transparent 36%),
+        linear-gradient(135deg, rgb(222,222,255) 0%, rgba(255,255,255,0.92) 68%);
+      opacity: 0.95; pointer-events: none;
+    }
+    .hero-surface {
+      position: relative; padding: clamp(3.5rem,8vw,6rem) clamp(1.5rem,4vw,4rem);
+    }
+
+    /* EYEBROW */
+    .eyebrow {
+      display: inline-flex; padding: 0.45rem 0.9rem; margin-bottom: 1rem;
+      border-radius: 9999px;
+      border: 1px solid rgba(26,115,232,0.18);
+      background: rgba(255,255,255,0.72);
+      color: var(--primary); font-size: 0.8rem; font-weight: 600;
+      letter-spacing: 0.1em; text-transform: uppercase;
+    }
+
+    h1 {
+      font-size: clamp(2.6rem,5vw,5.4rem); font-weight: 500;
+      margin-bottom: 1rem; letter-spacing: -0.04em; line-height: 1.1;
+      max-width: 14ch; color: var(--on-surface);
+    }
+    h2 {
+      font-size: clamp(1.8rem,2vw,2.6rem); font-weight: 500;
+      color: var(--on-surface); letter-spacing: -0.03em;
+    }
+    .subtitle {
+      font-size: clamp(1.05rem,1.2vw + 0.9rem,1.35rem);
+      margin-bottom: 1.5rem; max-width: 44rem;
+    }
+
+    /* BADGES / LINKS ROW */
+    .contact-info { display: flex; flex-wrap: wrap; gap: 0.85rem; margin-bottom: 2rem; }
+    .contact-info a {
+      font-size: 0.95rem; font-weight: 500; padding: 0.85rem 1rem;
+      border-radius: 18px; background: rgba(255,255,255,0.78);
+      border: 1px solid var(--outline);
+      backdrop-filter: blur(16px); transition: all 0.2s;
+    }
+    .contact-info a:hover {
+      color: var(--primary);
+      border-color: rgba(26,115,232,0.2);
+      transform: translateY(-1px);
+      box-shadow: 0 12px 32px rgba(26,115,232,0.08);
+    }
+
+    /* HERO GRID */
+    .hero-grid {
+      display: grid; gap: 1.5rem; margin-top: 2rem;
+      grid-template-columns: minmax(0,1.1fr) minmax(0,0.9fr);
+    }
+    .card {
+      background: var(--surface-container); border: 1px solid var(--outline);
+      border-radius: 24px; box-shadow: 0 20px 48px rgba(0,0,0,0.05);
+      backdrop-filter: blur(24px);
+    }
+    .hero-copy-card { padding: 1.75rem; }
+    .hero-copy-meta {
+      color: var(--primary); font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 0.9rem;
+    }
+    .hero-copy-title {
+      font-size: clamp(1.6rem,2vw,2.4rem); font-weight: 500;
+      line-height: 1.15; letter-spacing: -0.03em; margin-bottom: 0.85rem;
+      color: var(--on-surface);
+    }
+    .hero-copy-text { font-size: 1rem; margin-bottom: 1.25rem; }
+
+    /* COPY BLOCK */
+    .copy-block {
+      padding: 1rem; border-radius: var(--radius-card);
+      border: 1px solid rgba(26,115,232,0.16);
+      background: rgba(255,255,255,0.86);
+    }
+    .copy-block__header {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 0.75rem; margin-bottom: 0.75rem;
+    }
+    .copy-block__eyebrow {
+      color: var(--primary); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .copy-block__button {
+      display: inline-flex; align-items: center; justify-content: center;
+      min-height: 2.5rem; padding: 0 0.95rem; border: 0;
+      border-radius: var(--radius-pill); background: var(--primary);
+      color: #fff; font-size: 0.9rem; font-weight: 600;
+      box-shadow: 0 10px 24px rgba(26,115,232,0.18); cursor: pointer;
+      transition: transform 0.2s, filter 0.2s, background-color 0.2s;
+      font-family: inherit;
+    }
+    .copy-block__button:hover { filter: brightness(1.06); }
+    .copy-block__button:active { transform: scale(0.98); }
+    .copy-block__button.is-copied { background: #0f9d58; box-shadow: 0 10px 24px rgba(15,157,88,0.18); }
+    .copy-block__value {
+      display: block; width: 100%; overflow-x: auto;
+      padding: 0.95rem 1rem; border-radius: 14px;
+      background: rgba(15,23,42,0.92); color: #e5f0ff;
+      font-family: 'Share Tech Mono', ui-monospace, monospace;
+      font-size: 0.95rem; line-height: 1.5;
+    }
+    .copy-block__hint { margin-top: 0.75rem; font-size: 0.95rem; }
+
+    /* STATUS GRID */
+    .status-grid { display: grid; gap: 1rem; grid-template-columns: repeat(2,1fr); }
+    .status-card { padding: 1.25rem; display: flex; flex-direction: column; gap: 0.45rem; }
+    .status-card--wide { grid-column: 1 / -1; }
+    .status-label, .section-eyebrow, .job-duration {
+      color: var(--primary); font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase;
+    }
+    .status-card strong { color: var(--on-surface); font-size: 1rem; }
+    .status-card code {
+      color: var(--on-surface); font-size: 1rem;
+      font-family: 'Share Tech Mono', ui-monospace, monospace;
+    }
+
+    /* SECTIONS */
+    .section { padding: 2.5rem 0; }
+    .section-header { margin-bottom: 1.5rem; }
+    .section-description { max-width: 46rem; margin-top: 0.75rem; }
+    .jobs, .skills { display: grid; gap: 1.25rem; }
+    .job, .skill { padding: 1.5rem; }
+    .job-title {
+      color: var(--on-surface); font-size: 1.45rem; font-weight: 500;
+      margin-top: 0.35rem; margin-bottom: 0.3rem; letter-spacing: -0.02em;
+    }
+    .job-company { color: var(--on-surface-variant); font-size: 0.96rem; font-weight: 500; margin-bottom: 0.9rem; }
+    .guide-image { margin-top: 1.25rem; }
+    .guide-image img {
+      width: 100%; height: auto; display: block;
+      border-radius: 18px; border: 1px solid var(--outline);
+    }
+    .guide-image figcaption { margin-top: 0.7rem; font-size: 0.9rem; color: var(--on-surface-variant); }
+    .skill-name { color: var(--on-surface); font-size: 1.05rem; font-weight: 600; margin-bottom: 0.5rem; }
+    .note-card {
+      border-color: rgba(26,115,232,0.22);
+      background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(26,115,232,0.04));
+    }
+
+    @media (max-width: 960px) {
+      .hero-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .container { padding-inline: 1rem; }
+      .nav-container {
+        padding-inline: 1rem; flex-direction: column;
+        align-items: flex-start; padding-top: 0.7rem; padding-bottom: 0.7rem;
+      }
+      .nav-menu { width: 100%; justify-content: flex-start; }
+      .hero-surface, .job, .skill, .hero-copy-card, .status-card { padding: 1.2rem; }
+      .copy-block__header { flex-direction: column; align-items: flex-start; }
+      .status-grid { grid-template-columns: 1fr; }
+      .status-card--wide { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<nav aria-label="Main navigation">
+  <div class="nav-container">
+    <a class="brand-mark" href="#overview">Perplexity Pro Activation Guide</a>
+    <ul class="nav-menu">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#steps">Steps</a></li>
+      <li><a href="#faq">Checks</a></li>
+      <li><a href="#source">Source</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main class="container">
+
+  <!-- HERO -->
+  <header class="hero-shell" id="overview">
+    <div class="hero-gradient" aria-hidden="true"></div>
+    <div class="hero-surface">
+      <div class="eyebrow">Activation guide</div>
+      <h1>Complete the Perplexity Pro activation in nine steps.</h1>
+      <p class="subtitle">
+        This page keeps the process in one place so you can move from sign-in to
+        checkout without missing anything. Use a new account, switch to annual
+        billing, apply your promo code, and confirm the total changes to €0 before
+        payment.
+      </p>
+
+      <div class="contact-info">
+        <a href="#steps">9-step sequence</a>
+        <a href="#steps">Annual billing required</a>
+        <a href="#faq">Troubleshooting</a>
+      </div>
+
+      <div class="hero-grid">
+        <div class="card hero-copy-card">
+          <div class="hero-copy-meta">Start here</div>
+          <h2 class="hero-copy-title">Open the site, sign in, then continue to pricing.</h2>
+          <p class="hero-copy-text">
+            Start from the main Perplexity website. After you sign in, move through the
+            pricing flow in order and only finish checkout once the total has dropped to €0.
+          </p>
+          <div class="copy-block" role="group" aria-label="Copy Perplexity website">
+            <div class="copy-block__header">
+              <span class="copy-block__eyebrow">Perplexity website</span>
+              <button class="copy-block__button" id="copyBtn" type="button" aria-live="polite">Copy URL</button>
+            </div>
+            <code class="copy-block__value">https://www.perplexity.ai/</code>
+            <p class="copy-block__hint">Open this website first, then sign in and continue to the pricing flow.</p>
+          </div>
+        </div>
+
+        <div class="status-grid">
+          <div class="card status-card">
+            <span class="status-label">Account</span>
+            <strong>New account only</strong>
+          </div>
+          <div class="card status-card">
+            <span class="status-label">Billing</span>
+            <strong>Annual Billing</strong>
+          </div>
+          <div class="card status-card">
+            <span class="status-label">Confirm</span>
+            <strong>Total = €0</strong>
+          </div>
+          <div class="card status-card status-card--wide">
+            <span class="status-label">Payment</span>
+            <code>Use a valid debit card, preferably Visa or Mastercard.</code>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- STEPS -->
+  <section class="section" id="steps">
+    <div class="section-header">
+      <p class="section-eyebrow">Steps</p>
+      <h2>Activation steps</h2>
+      <p class="section-description">
+        Follow the sequence in order. Do not continue to payment until the discount is
+        applied and the total shown at checkout is €0.
+      </p>
+    </div>
+
+    <div class="jobs">
+
+      <article class="card job" id="step-01">
+        <div class="job-duration">STEP 01</div>
+        <h3 class="job-title">Go to the Perplexity website</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Start at the main Perplexity website before doing anything else.</p>
+        <ul>
+          <li>Open the site in your browser.</li>
+          <li>Use the same browser session for the full activation flow.</li>
+        </ul>
+      </article>
+
+      <article class="card job" id="step-02">
+        <div class="job-duration">STEP 02</div>
+        <h3 class="job-title">Sign in to your account</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Log in before you try to change the pricing plan.</p>
+        <ul>
+          <li>Only new accounts with no previous Pro subscriptions are accepted.</li>
+          <li>Do not continue with an account that has already had Perplexity Pro before.</li>
+        </ul>
+      </article>
+
+      <article class="card job" id="step-03">
+        <div class="job-duration">STEP 03</div>
+        <h3 class="job-title">Click Update your pricing plan</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Once you are signed in, open the pricing flow from your account.</p>
+        <ul>
+          <li>Find the option labeled "Update your pricing plan".</li>
+          <li>This takes you to the checkout page where the billing settings can be changed.</li>
+        </ul>
+        <figure class="guide-image">
+          <img src="guide/perplexity-plan.png" alt="Perplexity pricing plan screen" width="1280" height="751" loading="lazy">
+          <figcaption>Use the pricing plan entry point after signing in.</figcaption>
+        </figure>
+      </article>
+
+      <article class="card job" id="step-04">
+        <div class="job-duration">STEP 04</div>
+        <h3 class="job-title">Switch to Annual Billing</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>The checkout must be on annual billing before you apply the code.</p>
+        <ul>
+          <li>Do not leave the billing cycle on monthly.</li>
+          <li>Confirm the annual option is selected before moving to the next field.</li>
+        </ul>
+      </article>
+
+      <article class="card job" id="step-05">
+        <div class="job-duration">STEP 05</div>
+        <h3 class="job-title">Select the currency of your bank country</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Use the currency that matches your bank country at checkout.</p>
+        <ul>
+          <li>Choose the correct currency from the available list.</li>
+          <li>Make sure the billing information matches the selected country and currency.</li>
+        </ul>
+      </article>
+
+      <article class="card job" id="step-06">
+        <div class="job-duration">STEP 06</div>
+        <h3 class="job-title">Enter your Promo Code</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Apply your promo code in the dedicated field on the checkout form.</p>
+        <ul>
+          <li>Enter the code exactly as provided to you.</li>
+          <li>Wait for the checkout summary to refresh after applying it.</li>
+        </ul>
+        <figure class="guide-image">
+          <img src="guide/perplexity-promo.png" alt="Perplexity promo code field on checkout" width="1280" height="751" loading="lazy">
+          <figcaption>Apply the promo code in the checkout form before submitting payment.</figcaption>
+        </figure>
+      </article>
+
+      <article class="card job" id="step-07">
+        <div class="job-duration">STEP 07</div>
+        <h3 class="job-title">Confirm the total becomes €0</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Before paying, verify that the discount has fully reduced the total.</p>
+        <ul>
+          <li>The total should display €0 after the code is accepted.</li>
+          <li>If the price does not change, stop and troubleshoot before continuing.</li>
+        </ul>
+      </article>
+
+      <article class="card job" id="step-08">
+        <div class="job-duration">STEP 08</div>
+        <h3 class="job-title">Enter your card details and billing address</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>Complete the payment form only after the discounted total is correct.</p>
+        <ul>
+          <li>Use a valid debit card, preferably Visa or Mastercard.</li>
+          <li>Enter your existing billing address exactly as your bank expects it.</li>
+        </ul>
+      </article>
+
+      <article class="card job" id="step-09">
+        <div class="job-duration">STEP 09</div>
+        <h3 class="job-title">Finish the €0 payment and cancel auto-renewal if needed</h3>
+        <div class="job-company">Perplexity Pro procedure</div>
+        <p>After the successful €0 checkout, you can disable renewal from settings.</p>
+        <ul>
+          <li>Complete the payment flow and wait for confirmation.</li>
+          <li>If you do not want renewal later, go to your settings and click "Cancel Subscription".</li>
+        </ul>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- FAQ / CHECKS -->
+  <section class="section" id="faq">
+    <div class="section-header">
+      <p class="section-eyebrow">Checks</p>
+      <h2>Troubleshooting</h2>
+      <p class="section-description">
+        If the promo code does not work or checkout fails, verify these conditions
+        before retrying the activation.
+      </p>
+    </div>
+
+    <div class="skills">
+      <article class="card skill note-card">
+        <div class="skill-name">If the promo code is invalid</div>
+        <p>
+          Make sure you are using a new account, enter a valid debit card, and if the
+          problem continues change your IP to another European country before trying
+          the activation again.
+        </p>
+      </article>
+
+      <article class="card skill">
+        <div class="skill-name">What if the promo code says it is invalid?</div>
+        <p>Check that the account is new, make sure a valid debit card is entered, and if it still fails change your IP to another European country before trying again.</p>
+      </article>
+
+      <article class="card skill">
+        <div class="skill-name">Can I use an account that already had Perplexity Pro before?</div>
+        <p>No. The source instructions say only new accounts with no previous Pro subscriptions are accepted.</p>
+      </article>
+
+      <article class="card skill">
+        <div class="skill-name">When should I cancel the subscription?</div>
+        <p>Only after the €0 payment succeeds. Then you can open settings and use the cancel subscription option if you do not want auto-renewal.</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SOURCE -->
+  <section class="section" id="source">
+    <div class="section-header">
+      <p class="section-eyebrow">Source</p>
+      <h2>Source trace</h2>
+    </div>
+    <p>
+      The instructional copy and screenshots on this page are adapted from the original
+      Perplexity Pro guide and kept here in a cleaner, easier-to-follow format.
+    </p>
+    <div class="contact-info" style="margin-top:1.25rem">
+      <a href="https://teletype.in/@sup476/bUMyqDtSoVg" target="_blank" rel="noreferrer">Original guide</a>
+      <a href="#overview">Back to top</a>
+    </div>
+  </section>
+
+</main>
+
+<script>
+  const copyBtn = document.getElementById('copyBtn');
+  copyBtn.addEventListener('click', async () => {
+    try {
+      await navigator.clipboard.writeText('https://www.perplexity.ai/');
+    } catch {
+      const ta = document.createElement('textarea');
+      ta.value = 'https://www.perplexity.ai/';
+      ta.style.position = 'absolute'; ta.style.left = '-9999px';
+      document.body.appendChild(ta); ta.select();
+      document.execCommand('copy'); document.body.removeChild(ta);
+    }
+    copyBtn.textContent = 'Copied';
+    copyBtn.classList.add('is-copied');
+    setTimeout(() => { copyBtn.textContent = 'Copy URL'; copyBtn.classList.remove('is-copied'); }, 2200);
+  });
+</script>
+</body>
+</html>
