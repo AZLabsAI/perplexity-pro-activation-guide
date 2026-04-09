@@ -1,30 +1,27 @@
-import type { Metadata } from "next";
-import { Google_Sans_Flex, Roboto, Share_Tech_Mono } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import { Google_Sans_Flex, Roboto, Share_Tech_Mono } from 'next/font/google';
+import { defaultMetadata } from './lib/seo';
+import './globals.css';
 
 const googleSansFlex = Google_Sans_Flex({
-  variable: "--font-google-sans",
-  subsets: ["latin"],
-  display: "swap",
+  variable: '--font-google-sans',
+  subsets: ['latin'],
+  display: 'swap',
 });
 
 const shareTechMono = Share_Tech_Mono({
-  variable: "--font-share-tech-mono",
-  subsets: ["latin"],
-  weight: "400",
+  variable: '--font-share-tech-mono',
+  subsets: ['latin'],
+  weight: '400',
 });
 
 const roboto = Roboto({
-  variable: "--font-roboto",
-  subsets: ["latin"],
-  weight: ["400", "500", "700"],
+  variable: '--font-roboto',
+  subsets: ['latin'],
+  weight: ['400', '500', '700'],
 });
 
-export const metadata: Metadata = {
-  title: "Perplexity Pro Activation Guide",
-  description:
-    "A focused activation guide for completing the Perplexity Pro checkout flow with the required annual billing and €0 confirmation.",
-};
+export const metadata: Metadata = defaultMetadata;
 
 export default function RootLayout({
   children,

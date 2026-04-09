@@ -108,6 +108,13 @@ export const steps = [
   },
 ] as const;
 
+export const checklist = [
+  'Use a new account that has never had Perplexity Pro before.',
+  'Switch to Annual Billing before applying the code.',
+  'Check that the total shows €0 before you submit the payment form.',
+  'Use a valid debit card and billing details that match your bank records.',
+] as const;
+
 export const faqs = [
   {
     question: "What if the promo code says it is invalid?",

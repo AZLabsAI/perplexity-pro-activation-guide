@@ -1,10 +1,13 @@
-import Image from "next/image";
-import { CopyUrlBlock } from "./components/CopyUrlBlock";
-import { faqs, steps } from "./lib/content";
+import Image from 'next/image';
+import { JsonLd } from './components/JsonLd';
+import { CopyUrlBlock } from './components/CopyUrlBlock';
+import { checklist, faqs, steps } from './lib/content';
+import { buildFaqSchema, buildHowToSchema, SITE_URL } from './lib/seo';
 
 export default function Home() {
   return (
     <>
+      <JsonLd data={[buildHowToSchema(steps), buildFaqSchema(faqs)]} />
       <nav aria-label="Main navigation">
         <div className="nav-container">
           <a className="brand-mark link-shimmer-inline" href="#overview">
@@ -116,7 +119,7 @@ export default function Home() {
                       width={1280}
                       height={751}
                       className="guide-image__asset"
-                      priority={step.number === "03"}
+                      priority={step.number === '03'}
                     />
                     <figcaption>{step.image.caption}</figcaption>
                   </figure>
@@ -137,6 +140,15 @@ export default function Home() {
           </div>
 
           <div className="skills">
+            <article className="skill note-card">
+              <div className="skill-name">Before you submit payment</div>
+              <ul>
+                {checklist.map((item) => (
+                  <li key={item}>{item}</li>
+                ))}
+              </ul>
+            </article>
+
             <article className="skill note-card">
               <div className="skill-name">If the promo code is invalid</div>
               <p>
@@ -168,6 +180,7 @@ export default function Home() {
             <a href="https://teletype.in/@sup476/bUMyqDtSoVg" target="_blank" rel="noreferrer">
               Original guide
             </a>
+            <a href={SITE_URL}>Copy guide URL</a>
             <a href="#overview">Back to top</a>
           </div>
         </section>
